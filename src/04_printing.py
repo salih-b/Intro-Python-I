@@ -14,4 +14,8 @@ z = "I like turtles!"
 
 # Use the 'format' string method to print the same thing
 
+print("x is {x}, y is {y}, z is {z}".format(x = x, y=y, z=z))
+
 # Finally, print the same thing using an f-string
+
+print(f"x is {x}, y is {y}, z is {z}")
