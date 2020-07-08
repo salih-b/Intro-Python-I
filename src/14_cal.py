@@ -26,7 +26,18 @@ This would mean that from the command line you would call `python3 14_cal.py 4 2
 print out a calendar for April in 2015, but if you omit either the year or both values, 
 it should use today’s date to get the month and year.
 """
+# the art of doing science and engineering, dm Ira Sanchez about books ,,,, and Kill anything that moves by nick turse
 
 import sys
 import calendar
 from datetime import datetime
+
+#date time expects an Integar
+#.Calendar(firstweeday-0)
+
+#note:check argv
+arg_length = len(sys.argv)
+  #   - if no input, default to todays date. print method datetime.now().month and another datetime.now().year
+  #   - elif one input, its going to be the month we're going to use the current year
+  #   - elif two input, the first will be the month, 2nd will be the year. will use those for the calendar
+  #   - else  more than two inputs, send error message. 
