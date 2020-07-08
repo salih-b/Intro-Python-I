@@ -34,10 +34,33 @@ from datetime import datetime
 
 #date time expects an Integar
 #.Calendar(firstweeday-0)
-
+print(sys.argv)
 #note:check argv
 arg_length = len(sys.argv)
   #   - if no input, default to todays date. print method datetime.now().month and another datetime.now().year
   #   - elif one input, its going to be the month we're going to use the current year
   #   - elif two input, the first will be the month, 2nd will be the year. will use those for the calendar
   #   - else  more than two inputs, send error message. 
+
+if arg_length == 1:
+    month = datetime.now().month
+    year =  datetime.now().year
+
+  
+elif arg_length == 2:
+    year = datetime.now().year
+    month = int(sys.argv[1])
+    # cal = calendar.TextCalendar()
+    # cal.prmonth(year, month)
+  
+elif arg_length == 3:
+    year = int(sys.argv[2])
+    month = int(sys.argv[1])
+    # cal = calendar.TextCalendar()
+    # cal.prmonth(year, month)
+else:
+    print('usage: 14_cal.py [month] [year]')
+    sys.exit(1)
+
+cal = calendar.TextCalendar()
+cal.prmonth(year, month)
